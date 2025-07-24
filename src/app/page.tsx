@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { getUniversalLink } from "@selfxyz/core";
+import { countries, getUniversalLink } from "@selfxyz/core";
 import {
   SelfQRcodeWrapper,
   SelfAppBuilder,
@@ -29,6 +29,7 @@ function VerificationPage() {
         disclosures: {
           /* 1. what you want to verify from users' identity */
           minimumAge: 18,
+          excludedCountries:[countries.BELGIUM,countries.ITALY],
           // ofac: false,
           // excludedCountries: [countries.BELGIUM],
 
