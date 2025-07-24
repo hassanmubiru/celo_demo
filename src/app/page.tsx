@@ -30,6 +30,10 @@ function VerificationPage() {
           /* 1. what you want to verify from users' identity */
           minimumAge: 18,
           excludedCountries:[countries.BELGIUM,countries.ITALY],
+          gender: true,
+          name:true,
+          ofac:true,
+
           // ofac: false,
           // excludedCountries: [countries.BELGIUM],
 
@@ -39,7 +43,7 @@ function VerificationPage() {
           nationality: true,
           // date_of_birth: true,
           // passport_number: false,
-          gender: true,
+          // gender is already defined above
           // expiry_date: false,
         }
       }).build();
